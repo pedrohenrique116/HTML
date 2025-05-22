@@ -96,3 +96,24 @@ h1 {
   background-color: var(--primary-color);
 }
 
+/* Arena de batalha */
+.battle-arena {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+
+.battle-scene {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 250px;
+  position: relative;
+}
+
