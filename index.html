@@ -32,8 +32,47 @@
                     <label>Turno:</label>
                     <span id="turn-counter">0</span>
                 </div>
-            </div>
+            </div>    
         </header>
+        <main>
+            <div class="battle-arena">
+                <div id="battle-message" class="battle-message"></div>
+                
+                <div class="battle-scene">
+                    <div class="gorilla-container">
+                        <div id="gorilla" class="gorilla"></div>
+                    </div>
+                    
+                    <div id="humans-container" class="humans-container">
+                        <!-- Humanos serão inseridos via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <button id="attack-btn" class="control-button attack">
+                    Atacar
+                    <span class="energy-cost">Energia: 20</span>
+                </button>
+                
+                <button id="defend-btn" class="control-button defend">
+                    Defender
+                    <span class="energy-cost">Energia: 15</span>
+                </button>
+                
+                <button id="heal-btn" class="control-button heal">
+                    Curar
+                    <span class="energy-cost">Energia: 30</span>
+                </button>
+            </div>
+
+            <div class="battle-log">
+                <h3 class="log-title">Registro de Batalha</h3>
+                <div id="log" class="log-entries">
+                    <div class="log-entry">Novo jogo iniciado! Um gorila contra 100 humanos!</div>
+                </div>
+            </div>
+        </main>
     </div>
     
 </body>
