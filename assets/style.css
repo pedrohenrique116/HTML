@@ -268,4 +268,33 @@ h1 {
   animation: pulse 1s infinite;
 }
 
+.battle-log {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+.log-title {
+  color: var(--neutral-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+
+.log-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.log-entry {
+  padding: 5px;
+  border-left: 3px solid var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
