@@ -1,3 +1,10 @@
+Pedro Henrique Luiz Alves Duarte RM 563405
+Guilherme Macedo Martins RM 562396
+Gabriel hayashi Monteiro RM 562128
+
+
+
+
 # Gorila vs 100 Humanos
 
 Este projeto simula uma batalha entre um gorila e 100 humanos, onde o jogador controla o gorila e pode realizar três ações: atacar, defender e curar. Os humanos atacam automaticamente a cada turno.
