@@ -208,3 +208,64 @@ h1 {
   animation: fade-in-out 2s ease forwards;
 }
 
+.control-panel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+
+.control-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.control-button.attack {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+
+.control-button.defend {
+  background-color: var(--neutral-color);
+  color: black;
+}
+
+
+.control-button.heal {
+  background-color: var(--success-color);
+  color: white;
+}
+
+
+.energy-cost {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+
+.energy-warning {
+  color: #cc3300;
+  animation: pulse 1s infinite;
+}
+
+
