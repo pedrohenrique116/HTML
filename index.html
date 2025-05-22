@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Gorila vs 100 Humanos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gorila vs 100 Humanos</h1>
+            <div class="status-bar">
+                <div class="status-item">
+                    <label>Vida do Gorila:</label>
+                    <div class="progress-container">
+                        <div id="health-bar" class="progress-bar health"></div>
+                    </div>
+                    <span id="health-text">100/100</span>
+                </div>
+                <div class="status-item">
+                    <label>Energia do Gorila:</label>
+                    <div class="progress-container">
+                        <div id="energy-bar" class="progress-bar energy"></div>
+                    </div>
+                    <span id="energy-text">100/100</span>
+                </div>
+                <div class="status-item">
+                    <label>Humanos Restantes:</label>
+                    <span id="humans-count">100/100</span>
+                </div>
+                <div class="status-item">
+                    <label>Turno:</label>
+                    <span id="turn-counter">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="battle-arena">
+                <div id="battle-message" class="battle-message"></div>
+                
+                <div class="battle-scene">
+                    <div class="gorilla-container">
+                        <div id="gorilla" class="gorilla"></div>
+                    </div>
+                    
+                    <div id="humans-container" class="humans-container">
+                        <!-- Humanos serão inseridos via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <button id="attack-btn" class="control-button attack">
+                    Atacar
+                    <span class="energy-cost">Energia: 20</span>
+                </button>
+                
+                <button id="defend-btn" class="control-button defend">
+                    Defender
+                    <span class="energy-cost">Energia: 15</span>
+                </button>
+                
+                <button id="heal-btn" class="control-button heal">
+                    Curar
+                    <span class="energy-cost">Energia: 30</span>
+                </button>
+            </div>
+
+            <div class="battle-log">
+                <h3 class="log-title">Registro de Batalha</h3>
+                <div id="log" class="log-entries">
+                    <div class="log-entry">Novo jogo iniciado! Um gorila contra 100 humanos!</div>
+                </div>
+            </div>
+        </main>
+
+        <div id="game-over" class="game-over hidden">
+            <div class="game-over-content">
+                <h2 class="game-over-title">Fim de Jogo!</h2>
+                
+                <div id="winner-message" class="winner-message">
+                    <!-- Mensagem de vencedor será inserida via JavaScript -->
+                </div>
+                
+                <button id="reset-btn" class="reset-button">
+                    Iniciar Nova Batalha
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/javascript.js"></script>
+</body>
+</html>
