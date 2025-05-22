@@ -86,3 +86,50 @@ function updateUI() {
    
     // Renderizar humanos
     renderHumans();
+
+      // Atualizar logs
+    updateLogs();
+   
+    // Atualizar estado dos botões
+    updateButtons();
+   
+    // Salvar estado no LocalStorage
+    saveGameState();
+}
+
+
+// Renderizar humanos
+function renderHumans() {
+    humansContainer.innerHTML = '';
+   
+    // Limitar a 50 humanos para performance
+    const displayCount = Math.min(50, humans.length);
+   
+    for (let i = 0; i < displayCount; i++) {
+        const human = humans[i];
+        const humanElement = document.createElement('div');
+        humanElement.className = `human ${human.health <= 0 ? 'defeated' : ''}`;
+        humanElement.dataset.id = human.id;
+        humansContainer.appendChild(humanElement);
+    }
+   
+    // Adicionar contador se houver mais de 50 humanos
+    if (humans.length > 50) {
+        const counter = document.createElement('div');
+        counter.className = 'humans-counter';
+        counter.textContent = `+${humans.length - 50} humanos`;
+        humansContainer.appendChild(counter);
+    }
+}
+
+
+// Atualizar logs
+function updateLogs() {
+    // Usar innerHTML para atualizar os logs conforme requisito
+    logContainer.innerHTML = '';
+    logs.forEach(log => {
+        logContainer.innerHTML += `<div class="log-entry">${log}</div>`;
+    });
+}
+
+
