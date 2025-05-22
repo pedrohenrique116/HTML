@@ -155,3 +155,56 @@ h1 {
   animation: gorilla-hit 0.5s ease;
 }
 
+.humans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 70%;
+  height: 100%;
+  gap: 5px;
+}
+
+
+.human {
+  width: 30px;
+  height: 40px;
+  background-color: #FFD700;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+.human:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #FFD700;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.human.defeated {
+  opacity: 0.3;
+  filter: grayscale(100%);
+  transform: rotate(90deg);
+}
+
+
+.battle-message {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--neutral-color);
+  text-shadow: 1px 1px 2px black;
+  opacity: 0;
+  animation: fade-in-out 2s ease forwards;
+}
+
