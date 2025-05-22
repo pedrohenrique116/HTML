@@ -67,4 +67,22 @@ function initGame() {
    
     // Atualizar interface
     updateUI();
+   }
+
+   // Atualizar interface do usuário
+function updateUI() {
+    // Atualizar barras de status
+    healthBar.style.width = `${gorilla.health}%`;
+    energyBar.style.width = `${gorilla.energy}%`;
+    healthText.textContent = `${gorilla.health}/100`;
+    energyText.textContent = `${gorilla.energy}/100`;
    
+    // Contar humanos vivos
+    const aliveHumans = humans.filter(human => human.health > 0).length;
+    humansCount.textContent = `${aliveHumans}/100`;
+   
+    // Atualizar contador de turnos
+    turnCounter.textContent = turn;
+   
+    // Renderizar humanos
+    renderHumans();
