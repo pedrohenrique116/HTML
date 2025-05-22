@@ -117,3 +117,41 @@ h1 {
   position: relative;
 }
 
+.gorilla-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.gorilla {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/gorilla-cartoon-mascot-clipart-vector-sticker_637683_wh1200.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  transition: transform 0.3s ease;
+}
+
+
+.gorilla.attacking {
+  animation: attack-animation 1s ease;
+}
+
+
+.gorilla.defending {
+  animation: defend-animation 1s ease;
+}
+
+
+.gorilla.healing {
+  animation: heal-animation 1s ease;
+}
+
+
+.gorilla.hit {
+  animation: gorilla-hit 0.5s ease;
+}
+
